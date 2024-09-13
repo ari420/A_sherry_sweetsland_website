@@ -1,0 +1,116 @@
+
+/*
+* https://remixicon.com
+* https://github.com/Remix-Design/RemixIcon
+* Copyright RemixIcon.com
+* Released under the Apache License Version 2.0
+*/
+
+@font-face {
+    font-family: "remixicon";
+    src: url('remixicon.eot?t=1725814686613'); /* IE9*/
+    src: url('remixicon.eot?t=1725814686613#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url("remixicon.woff2?t=1725814686613") format("woff2"),
+    url("remixicon.woff?t=1725814686613") format("woff"),
+    url('remixicon.ttf?t=1725814686613') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('remixicon.svg?t=1725814686613#remixicon') format('svg'); /* iOS 4.1- */
+    font-display: swap;
+}
+
+[class^="ri-"], [class*="ri-"] {
+    font-family: 'remixicon' !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ri-lg { font-size: 1.3333em; line-height: 0.75em; vertical-align: -.0667em; }
+.ri-xl { font-size: 1.5em; line-height: 0.6666em; vertical-align: -.075em; }
+.ri-xxs { font-size: .5em; }
+.ri-xs { font-size: .75em; }
+.ri-sm { font-size: .875em }
+.ri-1x { font-size: 1em; }
+.ri-2x { font-size: 2em; }
+.ri-3x { font-size: 3em; }
+.ri-4x { font-size: 4em; }
+.ri-5x { font-size: 5em; }
+.ri-6x { font-size: 6em; }
+.ri-7x { font-size: 7em; }
+.ri-8x { font-size: 8em; }
+.ri-9x { font-size: 9em; }
+.ri-10x { font-size: 10em; }
+.ri-fw { text-align: center; width: 1.25em; }
+
+.ri-twitter-x-fill:before { content: "\f3e6"; }
+.ri-twitter-fill:before { content: "\f23a"; }
+.ri-tumblr-fill:before { content: "\f232"; }
+.ri-threads-fill:before { content: "\f3e0"; }
+.ri-tiktok-fill:before { content: "\f372"; }
+.ri-steam-fill:before { content: "\f190"; }
+.ri-telegram-fill:before { content: "\f1ef"; }
+.ri-skype-fill:before { content: "\f14b"; }
+.ri-instagram-line:before { content: "\ee66"; }
+.ri-linkedin-fill:before { content: "\eeb5"; }
+.ri-github-fill:before { content: "\edca"; }
+.ri-facebook-fill:before { content: "\ecbc"; }
+.ri-discord-line:before { content: "\ec38"; }
+.ri-pinterest-fill:before { content: "\efff"; }
+.ri-youtube-fill:before { content: "\f2d4"; }
+.ri-youtube-line:before { content: "\f2d5"; }
+.ri-github-line:before { content: "\edcb"; }
+.ri-whatsapp-line:before { content: "\f2bc"; }
+.ri-whatsapp-fill:before { content: "\f2bb"; }
+.ri-telegram-line:before { content: "\f1f0"; }
+.ri-skype-line:before { content: "\f14c"; }
+.ri-pinterest-line:before { content: "\f000"; }
+.ri-messenger-line:before { content: "\ef4a"; }
+.ri-messenger-fill:before { content: "\ef49"; }
+.ri-instagram-fill:before { content: "\ee65"; }
+.ri-shopping-cart-2-fill:before { content: "\f11d"; }
+.ri-shopping-cart-2-line:before { content: "\f11e"; }
+.ri-shopping-bag-fill:before { content: "\f117"; }
+.ri-shopping-bag-line:before { content: "\f118"; }
+.ri-shopping-bag-3-fill:before { content: "\f115"; }
+.ri-shopping-bag-3-line:before { content: "\f116"; }
+.ri-shopping-basket-fill:before { content: "\f11b"; }
+.ri-shopping-basket-line:before { content: "\f11c"; }
+.ri-cake-3-line:before { content: "\eb1b"; }
+.ri-cake-3-fill:before { content: "\eb1a"; }
+.ri-cake-2-fill:before { content: "\eb18"; }
+.ri-cake-2-line:before { content: "\eb19"; }
+.ri-cake-line:before { content: "\eb1d"; }
+.ri-cake-fill:before { content: "\eb1c"; }
+.ri-arrow-right-line:before { content: "\ea6c"; }
+.ri-arrow-left-line:before { content: "\ea60"; }
+.ri-arrow-up-line:before { content: "\ea76"; }
+.ri-arrow-left-up-line:before { content: "\ea66"; }
+.ri-arrow-right-up-line:before { content: "\ea70"; }
+.ri-arrow-right-down-line:before { content: "\ea6a"; }
+.ri-arrow-down-line:before { content: "\ea4c"; }
+.ri-arrow-left-down-line:before { content: "\ea5e"; }
+.ri-arrow-left-s-line:before { content: "\ea64"; }
+.ri-arrow-down-s-line:before { content: "\ea4e"; }
+.ri-arrow-right-s-line:before { content: "\ea6e"; }
+.ri-arrow-up-s-line:before { content: "\ea78"; }
+.ri-home-line:before { content: "\ee2b"; }
+.ri-home-2-line:before { content: "\ee19"; }
+.ri-home-2-fill:before { content: "\ee18"; }
+.ri-home-fill:before { content: "\ee26"; }
+.ri-money-dollar-circle-line:before { content: "\ef65"; }
+.ri-money-dollar-circle-fill:before { content: "\ef64"; }
+.ri-menu-line:before { content: "\ef3e"; }
+.ri-phone-fill:before { content: "\efe9"; }
+.ri-phone-line:before { content: "\efec"; }
+.ri-settings-3-line:before { content: "\f0e6"; }
+.ri-settings-4-line:before { content: "\f0e8"; }
+.ri-settings-4-fill:before { content: "\f0e7"; }
+.ri-settings-3-fill:before { content: "\f0e5"; }
+.ri-logout-box-r-line:before { content: "\eeda"; }
+.ri-logout-box-r-fill:before { content: "\eed9"; }
+.ri-logout-circle-r-line:before { content: "\eede"; }
+.ri-logout-circle-r-fill:before { content: "\eedd"; }
+.ri-search-line:before { content: "\f0d1"; }
+.ri-eye-off-line:before { content: "\ecb7"; }
+.ri-eye-off-fill:before { content: "\ecb6"; }
+.ri-eye-line:before { content: "\ecb5"; }
+.ri-eye-fill:before { content: "\ecb4"; }

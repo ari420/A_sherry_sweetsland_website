@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="src/icon/remixicon.css" />
+    <link rel="stylesheet" href="src/css/main.css" />
+    <style>
+      @layer utilities {
+        .text-gradient {
+          background: linear-gradient(
+            90deg,
+            rgba(123, 63, 241, 0.8) 0%,
+            rgba(29, 78, 216, 0.7) 100%
+          );
+          color: transparent;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main fixed w-full h-[120px] z-50">
+      <header class="flex w-full h-[120px] bg-white">
+        <div
+          class="w-5/12 md:w-3/12 h-full flex border-2 border-indigo-200 border-b-purple"
+        >
+          <figure class="w-12/12 h-full flex justify-center items-start">
+            <img class="h-full w-10/12" src="src/img/main_ligo5.svg" alt="" />
+          </figure>
+        </div>
+        <div class="w-3/12 md:w-7/12 h-full">
+          <nav class="w12/12 h-full border-2 border-indigo-200 border-b-purple">
+            <ul class="w12/12 h-full hidden md:flex felx-wrap">
+              <li
+                class="w-[100px] h-6/12 flex justify-center items-center flex-grow relative"
+              >
+                <a class="text-purple text-sm flex" href="">HOME</a>
+                <span class="absolute w-6/12 h-[3px] bg-purple bottom-8"></span>
+              </li>
+              <li
+                class="w-[100px] h-full flex justify-center items-center flex-gro relative group hover"
+              >
+                <a class="text-purple text-sm flex" href="">SHOP</a>
+                <span
+                  class="absolute w-6/12 opacity-0 h-[3px] bg-purple bottom-8 transition-opacity duration-300 group-hover:opacity-100 hover:opacity-100"
+                ></span>
+              </li>
+              <li
+                class="w-[100px] h-full flex justify-center items-center flex-grow relative group hover"
+              >
+                <a class="text-purple text-sm flex" href="">ABOUT</a>
+                <span
+                  class="absolute w-6/12 opacity-0 h-[3px] bg-purple bottom-8 transition-opacity duration-300 group-hover:opacity-100 hover:opacity-100"
+                ></span>
+              </li>
+              <li
+                class="w-[100px] h-full flex justify-center items-center flex-grow relative group hover"
+              >
+                <a class="text-purple text-sm flex" href="">GALLERY</a>
+                <span
+                  class="absolute w-6/12 opacity-0 h-[3px] bg-purple bottom-8 transition-opacity duration-300 group-hover:opacity-100 hover:opacity-100"
+                ></span>
+              </li>
+              <li
+                class="w-[100px] h-full flex justify-center items-center flex-grow relative group hover"
+              >
+                <a class="text-purple text-sm flex" href="">LOCATION</a>
+                <span
+                  class="absolute w-6/12 opacity-0 h-[3px] bg-purple bottom-8 transition-opacity duration-300 group-hover:opacity-100 hover:opacity-100"
+                ></span>
+              </li>
+              <li
+                class="w-[100px] h-full flex justify-center items-center flex-grow relative group hover"
+              >
+                <a class="text-purple text-sm flex" href="">JORNAL</a>
+                <span
+                  class="absolute w-6/12 opacity-0 h-[3px] bg-purple bottom-8 transition-opacity duration-300 group-hover:opacity-100 hover:opacity-100"
+                ></span>
+              </li>
+              <li
+                class="w-[100px] h-full flex justify-center items-center flex-grow relative group hover"
+              >
+                <a class="text-purple text-sm flex" href="">CONTACT</a>
+                <span
+                  class="absolute w-6/12 opacity-0 h-[3px] bg-purple bottom-8 transition-opacity duration-300 group-hover:opacity-100 hover:opacity-100"
+                ></span>
+              </li>
+            </ul>
+
+            <div
+              class="w-full h-full flex md:hidden justify-center items-center"
+            >
+              <button id="menu-button" class="p-4">
+                <i class="ri-menu-line text-purple text-2xl"></i>
+              </button>
+            </div>
+
+            <nav
+              id="menu"
+              class="fixed inset-0 bg-white text-purple transform -translate-x-full transition-transform duration-300 ease-in-out z-50"
+            >
+              <div class="flex justify-between border border-purple">
+                <img class="h-[180px] ml-4" src="src/img/main_logo3.svg" alt="" />
+                <button id="close-menu" class="text-purple text-4xl mr-4">
+                  &times;
+                </button>
+              </div>
+              <ul class="flex flex-wrap items-center border border-purple">
+                <li
+                  class="flex w-full border hover:bg-violet-100 group duration-300 justify-strart"
+                >
+                  <a href="#" class="text-lg py-2 px-4 ml-1 space-y-2">Home</a>
+                </li>
+                <li
+                  class="flex w-full border hover:bg-violet-100 group duration-300 justify-strart"
+                >
+                  <a href="#" class="text-lg py-2 px-4 ml-1 space-y-2">SHOP</a>
+                </li>
+                <li
+                  class="flex w-full border hover:bg-violet-100 group duration-300 justify-strart"
+                >
+                  <a href="#" class="text-lg py-2 px-4 ml-1 space-y-2">ABOUT</a>
+                </li>
+                <li
+                  class="flex w-full border hover:bg-violet-100 group duration-300 justify-strart"
+                >
+                  <a href="#" class="text-lg py-2 px-4 ml-1 space-y-2"
+                    >GALLERY</a
+                  >
+                </li>
+                <li
+                  class="flex w-full border hover:bg-violet-100 group duration-300 justify-strart"
+                >
+                  <a href="#" class="text-lg py-2 px-4 ml-1 space-y-2"
+                    >LOCATION</a
+                  >
+                </li>
+                <li
+                  class="flex w-full border hover:bg-violet-100 group duration-300 justify-strart"
+                >
+                  <a href="#" class="text-lg py-2 px-4 ml-1 space-y-2"
+                    >JORNAL</a
+                  >
+                </li>
+                <li
+                  class="flex w-full border hover:bg-violet-100 group duration-300 justify-strart"
+                >
+                  <a href="#" class="text-lg py-2 px-4 ml-1 space-y-2"
+                    >CONTACT</a
+                  >
+                </li>
+              </ul>
+            </nav>
+
+            <script>
+              // JavaScript to toggle menu visibility
+              document
+                .getElementById("menu-button")
+                .addEventListener("click", function () {
+                  document
+                    .getElementById("menu")
+                    .classList.remove("-translate-x-full");
+                  document
+                    .getElementById("menu")
+                    .classList.add("translate-x-0");
+                });
+
+              document
+                .getElementById("close-menu")
+                .addEventListener("click", function () {
+                  document
+                    .getElementById("menu")
+                    .classList.remove("translate-x-0");
+                  document
+                    .getElementById("menu")
+                    .classList.add("-translate-x-full");
+                });
+            </script>
+          </nav>
+        </div>
+        <div
+          class="w-4/12 md:w-2/12 h-full flex border-2 border-indigo-200 border-b-purple"
+        >
+          <ul class="w-full flex justify-center items-center">
+            <li
+              class="w-9/12 h-full flex justify-end items-center relative group hover"
+            >
+              <ul
+                class="w-full h-full flex justify-center items-center space-x-4"
+              >
+                <!-- Account Item -->
+                <li
+                  class="w-9/12 h-full flex justify-center items-center relative group hover"
+                >
+                  <a class="text-purple mx-4 text-lg" href="#">Account</a>
+                  <span
+                    class="absolute w-5/12 mx-4 opacity-0 h-[3px] bg-purple bottom-8 transition-opacity duration-300 group-hover:opacity-100 hover:opacity-100"
+                  ></span>
+                </li>
+                <!-- Sign-in Form -->
+                <div
+                  class="absolute  top-full right-0 h rounded-lg  w-[45vh] md:w-[40vh] lg:w-[50vh] 2xl:w-[40vh] bg-white border border-gray-300 p-6 shadow-lg hidden duration-300 group-hover:block z-50"
+                >
+                  <div class="text-center">
+                    <!-- Logo Placeholder -->
+                    <img
+                      class="mx-auto h-[80px] w-[80px]"
+                      src="src/img/main_logo3.svg"
+                      alt="Workflow"
+                    />
+                    <h2 class="mt-6 text-3xl font-extrabold text-gray-900">
+                      Sign in to your account
+                    </h2>
+                  </div>
+
+                  <form class="mt-8 space-y-6" action="#" method="POST">
+                    <div class="rounded-md shadow-sm -space-y-px">
+                      <div>
+                        <label for="email-address" class="sr-only"
+                          >Email address</label
+                        >
+                        <input
+                          id="email-address"
+                          name="email"
+                          type="email"
+                          autocomplete="email"
+                          required
+                          class="appearance-none rounded-t-md w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                          placeholder="Email address"
+                          autocomplete="nope"
+                        />
+                      </div>
+                      <div>
+                        <label for="password" class="sr-only">Password</label>
+                        <input
+                          id="password"
+                          name="password"
+                          type="password"
+                          autocomplete="current-password"
+                          required
+                          class="appearance-none rounded-b-md w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                          placeholder="Password"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="flex flex-wrap items-center justify-between">
+                      <div class="flex items-center">
+                        <input
+                          id="remember-me"
+                          name="remember-me"
+                          type="checkbox"
+                          class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
+                        />
+                        <label
+                          for="remember-me"
+                          class="ml-2 text-sm text-gray-900"
+                          >Remember me</label
+                        >
+                      </div>
+
+                      <div class="text-sm">
+                        <a
+                          href="#"
+                          class="font-medium text-indigo-600 hover:text-indigo-500"
+                          >Forgot your password?</a
+                        >
+                      </div>
+                    </div>
+
+                    <div>
+                      <button
+                        type="submit"
+                        class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      >
+                        Sign in
+                      </button>
+                    </div>
+                  </form>
+
+                  <div class="text-center text-sm text-gray-600">
+                    Not a member?
+                    <a
+                      href="#"
+                      class="font-medium text-indigo-600 hover:text-indigo-500"
+                    >
+                      Register Now</a
+                    >
+                  </div>
+                </div>
+
+                <!-- Another Item -->
+              </ul>
+            </li>
+            <li
+              class="w-3/12 h-full flex justify-start items-center relative group hover"
+            >
+              <a class="text-purple mx-1 text-lg" href=""
+                ><i class="ri-shopping-cart-2-fill"></i
+              ></a>
+              <span
+                class="absolute w-6/12 opacity-0 h-[3px] bg-purple bottom-8 transition-opacity duration-300 group-hover:opacity-100 hover:opacity-100"
+              ></span>
+            </li>
+          </ul>
+        </div>
+      </header>
+    </div>
+
+    <!-- header done///////////////// -->
+
+    <div class="fillgap h-[120px] w-full flex"></div>
+
+    <!-- fillgap done/////////////////////// -->
+
+    <div class="cake w-12/12 flex flex-wrap md:hidden bg-red-100">
+      <div class="p1 w-full my-1 flex">
+        <p class="ml-7 my-7 text-slate-500 text-sm font-mono">
+          FRESH & TASTY Cake EVERY DAY
+        </p>
+      </div>
+      <dic class="h1 w-full my-1 flex"
+        ><h1 class="ml-7 my-4 text-purple text-4xl font-primary">
+          The Perfect Fresh Cakes
+        </h1></dic
+      >
+      <div class="a w-full my-1 flex">
+        <a
+          class="bg-white ml-7 py-2 px-5 rounded-lg my-2 text-purple hover:bg-purple hover:text-white duration-300"
+          href=""
+          >Explore our products</a
+        >
+      </div>
+    </div>
+
+    <figure
+      class="flex w-12/12 justify-center md:relative items-center overflow-hidden"
+    >
+      <img
+        class="flex scale-140 h-[65vh] md:h-[100vh] md:scale-150 object-cover w-full"
+        src="src/img/hero-header-bakery.jpg"
+        alt=""
+      />
+      <div class="main hidden absolute top-20 md:flex flex-wrap">
+        <div class="p1 w-full my-1 flex">
+          <p class="ml-10 my-6 text-slate-500 text-sm font-mono">
+            FRESH & TASTY Cake EVERY DAY
+          </p>
+        </div>
+        <dic class="h1 w-full my-1 flex"
+          ><h1
+            class="md:w-6/12 lg:w-4/12 2xl:w-[350px] ml-10 my-2 text-purple text-6xl font-primary"
+          >
+            The Perfect Fresh Cakes
+          </h1></dic
+        >
+        <div class="p1 w-full my-1 flex">
+          <p
+            class="md:w-5/12 2xl:w-[500px] ml-10 my-2 text-slate-500 text-sm font-mono"
+          >
+            Cras consequat lectus vestibulum tortor pulvinar, quis euismod nisl
+            varius. Aliquam erat volutpat. Nullam quis sagittis nibh ac nulla id
+            orci tempor.
+          </p>
+        </div>
+        <div class="a w-full my-1 flex">
+          <a
+            class="bg-white ml-10 py-2 px-5 rounded-lg my-2 text-purple text-sm hover:bg-purple hover:text-white duration-300"
+            href="#"
+            >Explore our products</a
+          >
+        </div>
+      </div>
+    </figure>
+
+    <!-- perfect cakes done////////////////// -->
+
+    <div class="main1 w-12/12 flex justify-center">
+      <ul class="w-11/12 md:hidden flex flex-wrap">
+        <li class="w-full flex flex-wrap">
+          <div class="p1 w-full my-1 flex justify-center">
+            <p class="my-7 text-slate-500 text-sm font-mono">OUR PRODUCTS</p>
+          </div>
+          <div class="h1 w-full my-1 flex justify-center">
+            <h1 class="my-4 text-center text-purple text-3xl font-primary">
+              All our delectable pastries are backed fresh in our Kitchen very
+              morning, and are made with all-natural, all organic ingredients.
+            </h1>
+          </div>
+          <div class="a w-full my-1 flex">
+            <a
+              class="bg-purple py-4 px-5 rounded-lg my-2 text-white hover:border border-purple hover:bg-white hover:text-purple duration-300"
+              href="#"
+              >Buy sweets Today!</a
+            >
+          </div>
+        </li>
+        <li class="w-full flex flex-wrap">
+          <figure class="w-full overflow-hidden">
+            <img
+              class="w-full mt-4 object-cover h-[60vh] hover:scale-125 duration-1000"
+              src="src/img/cup_cake1.png"
+              alt=""
+            />
+          </figure>
+          <div
+            class="p1 w-full flex justify-center text-lg font-primary text-purple"
+          >
+            <p>green coffee cupcake</p>
+          </div>
+          <div class="p2 w-full flex justify-center text-purple my-2">
+            <p>$36.00 – $60.00</p>
+          </div>
+        </li>
+        <li class="w-full flex flex-wrap">
+          <figure class="w-full overflow-hidden">
+            <img
+              class="w-full mt-4 object-cover h-[60vh] hover:scale-125 duration-1000"
+              src="src/img/cup_cake2.png"
+              alt=""
+            />
+          </figure>
+          <div
+            class="p1 w-full flex justify-center text-lg font-primary text-purple"
+          >
+            <p>chocolate cupcake</p>
+          </div>
+          <div class="p2 w-full flex justify-center text-purple my-2">
+            <p>$18.00 – $32.00</p>
+          </div>
+        </li>
+      </ul>
+
+      <nav class="w-11/12 hidden md:flex justify-center">
+        <ul class="w-12/12 flex flex-wrap justify-between mt-20">
+          <li class="w-12/12 lg:w-[32.3333%] flex flex-wrap">
+            <div class="p1 w-full my-1 flex justify-center">
+              <p class="my-7 text-slate-500 text-sm font-mono">OUR PRODUCTS</p>
+            </div>
+            <dic class="h1 w-full my-1 flex justify-center"
+              ><h1 class="my-4 text-center text-purple text-3xl font-primary">
+                All our delectable pastries are backed fresh in our Kitchen very
+                morning, and are made with all-natural, all organic ingredients.
+              </h1></dic
+            >
+            <div class="a w-full my-1 flex">
+              <a
+                class="bg-purple flex justify-center items-center px-4 py-4 lg:py-0 2xl:h-[50px] rounded-lg my-2 text-white hover:border border-purple hover:bg-white hover:text-purple duration-300"
+                href="#"
+                >Buy sweets Today!</a
+              >
+            </div>
+          </li>
+          <li class="w-[48%] lg:w-[32.3333%] flex flex-wrap">
+            <figure class="w-full overflow-hidden h-[60vh]">
+              <img
+                class="w-full object-cover h-full hover:scale-125 duration-1000"
+                src="src/img/cup_cake1.png"
+                alt=""
+              />
+            </figure>
+            <div
+              class="p1 w-full flex justify-center text-lg font-primary text-purple"
+            >
+              <p>green coffee cupcake</p>
+            </div>
+            <div class="p2 w-full flex justify-center text-purple my-2">
+              <p>$36.00 – $60.00</p>
+            </div>
+          </li>
+          <li class="w-[48%] lg:w-[32.3333%] flex flex-wrap">
+            <figure class="w-full overflow-hidden h-[60vh]">
+              <img
+                class="w-full object-cover h-full hover:scale-125 duration-1000"
+                src="src/img/cup_cake2.png"
+                alt=""
+              />
+            </figure>
+            <div
+              class="p1 w-full flex justify-center text-lg font-primary text-purple"
+            >
+              <p>chocolate cupcake</p>
+            </div>
+            <div class="p2 w-full flex justify-center text-purple my-2">
+              <p>$18.00 – $32.00</p>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- products done////////////////// -->
+
+    <div class="main2 w-12/12 flex justify-center">
+      <nav class="w-11/12 flex justify-center">
+        <ul class="w-full flex flex-wrap lg:justify-between">
+          <li class="w-full flex flex-wrap">
+            <div class="p1 w-full my-1 flex justify-center">
+              <p class="mt-20 mb-2 text-slate-500 text-sm font-mono">
+                CORPORATE & WEDDINGS
+              </p>
+            </div>
+            <dic class="h1 w-full my-1 flex justify-center"
+              ><h1 class="text-center my-2 text-purple text-3xl font-primary">
+                Baking Special Moments
+              </h1></dic
+            >
+          </li>
+          <li class="w-full lg:w-[48%] flex flex-wrap relative">
+            <figure class="w-full flex items-center relative my-2 group">
+              <img
+                class="w-full h-[80vh] object-cover lg:z-10 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                src="src/img/img8.jpg"
+                alt=""
+              />
+              <figcaption
+                class="w-full flex flex-wrap absolute z-20 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div class="p1 w-full my-1 flex justify-center">
+                  <p class="my-2 text-slate-200 text-md md:text-lg font-mono">
+                    birthday party
+                  </p>
+                </div>
+                <dic class="h1 w-full my-1 flex justify-center"
+                  ><h1
+                    class="my-2 text-white text-3xl md:text-5xl font-primary"
+                  >
+                    Corporate Events
+                  </h1></dic
+                >
+                <div class="a w-full my-1 flex justify-center">
+                  <a
+                    class="bg-purple py-2 px-5 rounded-lg my-2 text-white hover:bg-white hover:border border-purple hover:text-purple duration-300"
+                    href="#"
+                    >Explore more</a
+                  >
+                </div>
+              </figcaption>
+              <div
+                class="absolute w-full h-full bg-black opacity-20 top-0 left-0 z-10 lg:hidden"
+              ></div>
+              <img
+                class="absolute w-full h-full object-cover top-0 left-0 z-0 hidden lg:flex"
+                src="src/img/corporate-bg.jpg"
+                alt=""
+              />
+            </figure>
+          </li>
+          <li class="w-full lg:w-[48%] flex flex-wrap relative">
+            <figure class="w-full flex items-center relative my-2 group">
+              <img
+                class="w-full h-[80vh] object-cover lg:z-10 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                src="src/img/img1.jpg"
+                alt=""
+              />
+              <figcaption
+                class="w-full flex flex-wrap absolute z-20 lg:opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <div class="p1 w-full my-1 flex justify-center">
+                  <p class="my-2 text-slate-200 text-md md:text-lg font-mono">
+                    Private Dining Hall
+                  </p>
+                </div>
+                <div class="h1 w-full my-1 flex justify-center">
+                  <h1 class="my-2 text-white text-3xl md:text-5xl font-primary">
+                    Wedding party
+                  </h1>
+                </div>
+                <div class="a w-full my-1 flex justify-center">
+                  <a
+                    class="bg-purple py-2 px-5 rounded-lg my-2 text-white hover:bg-white hover:border border-purple hover:text-purple duration-300"
+                    href="#"
+                    >Explore more</a
+                  >
+                </div>
+              </figcaption>
+              <div
+                class="absolute w-full h-full bg-black opacity-20 top-0 left-0 z-10 lg:hidden"
+              ></div>
+              <img
+                class="absolute w-full h-full object-cover top-0 left-0 z-0 hidden lg:flex"
+                src="src/img/wedding-bg.jpg"
+                alt=""
+              />
+            </figure>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- moments done//////////////////////// -->
+
+    <div class="main1 w-12/12 flex justify-center">
+      <ul class="w-11/12 md:hidden flex flex-wrap">
+        <li class="w-full flex flex-wrap">
+          <div class="h1 w-full my-1 flex justify-center">
+            <h1
+              class="mt-10 mb-4 text-center text-purple text-3xl font-primary"
+            >
+              Find a freshly baked product perfect for you
+            </h1>
+          </div>
+          <div class="p1 w-full my-1 flex justify-center">
+            <p class="my-2 text-center text-slate-500 text-sm font-mono">
+              Integer a nibh vitae ex porttitor rutrum et ut velit. Etiam ac
+              felis at leo feugiat placerat. Sed ac nulla id orci tempor
+              convallis sed
+            </p>
+          </div>
+          <div class="a w-full my-1 flex justify-center">
+            <a
+              class="bg-purple py-4 px-5 rounded-lg my-2 text-white hover:border border-purple hover:bg-white hover:text-purple duration-300"
+              href="#"
+              >Shop All Products</a
+            >
+          </div>
+        </li>
+        <li class="w-full flex flex-wrap">
+          <figure class="w-full overflow-hidden mt-4">
+            <img
+              class="w-full object-cover h-[60vh] hover:scale-125 duration-1000"
+              src="src/img/img2.jpg"
+              alt=""
+            />
+          </figure>
+          <div
+            class="p1 w-full flex justify-center text-lg font-primary text-purple"
+          >
+            <p>children sweet design</p>
+          </div>
+          <div class="p2 w-full flex justify-center text-purple my-2">
+            <p>$150.00 – $380.00</p>
+          </div>
+        </li>
+        <li class="w-full flex flex-wrap">
+          <figure class="w-full overflow-hidden mt-4">
+            <img
+              class="w-full object-cover h-[60vh] hover:scale-125 duration-1000"
+              src="src/img/img3.jpg"
+              alt=""
+            />
+          </figure>
+          <div
+            class="p1 w-full flex justify-center text-lg font-primary text-purple"
+          >
+            <p>party sweet design</p>
+          </div>
+          <div class="p2 w-full flex justify-center text-purple my-2">
+            <p>$150.00 – $380.00</p>
+          </div>
+        </li>
+        <li class="w-full flex flex-wrap">
+          <figure class="w-full overflow-hidden mt-4">
+            <img
+              class="w-full object-cover h-[60vh] hover:scale-125 duration-1000"
+              src="src/img/img4.jpg"
+              alt=""
+            />
+          </figure>
+          <div
+            class="p1 w-full flex justify-center text-lg font-primary text-purple"
+          >
+            <p>classic sweet design</p>
+          </div>
+          <div class="p2 w-full flex justify-center text-purple my-2">
+            <p>$150.00 – $380.00</p>
+          </div>
+        </li>
+        <li class="w-full flex flex-wrap">
+          <figure class="w-full overflow-hidden mt-4">
+            <img
+              class="w-full object-cover h-[60vh] hover:scale-125 duration-1000"
+              src="src/img/img7.jpg"
+              alt=""
+            />
+          </figure>
+          <div
+            class="p1 w-full flex justify-center text-lg font-primary text-purple"
+          >
+            <p>fantasy sweet design</p>
+          </div>
+          <div class="p2 w-full flex justify-center text-purple my-2">
+            <p>$150.00 – $380.00</p>
+          </div>
+        </li>
+      </ul>
+
+      <nav class="w-11/12 hidden md:flex justify-center">
+        <ul class="w-12/12 flex flex-wrap justify-between mt-20">
+          <li class="w-12/12 lg:w-[19%] flex flex-wrap">
+            <div class="h1 w-full my-1 flex justify-center">
+              <h1
+                class="mt-10 mb-2 text-center text-purple text-3xl font-primary"
+              >
+                Find a freshly baked product perfect for you
+              </h1>
+            </div>
+            <div class="p1 w-full my-1 flex justify-center">
+              <p class="my-4 text-center text-slate-500 text-sm font-mono">
+                Integer a nibh vitae ex porttitor rutrum et ut velit. Etiam ac
+                felis at leo feugiat placerat. Sed ac nulla id orci tempor
+                convallis sed.
+              </p>
+            </div>
+            <div class="a w-full my-1 flex justify-center">
+              <a
+                class="mb-8 bg-purple flex justify-center items-center px-4 py-4 2xl:h-[50px] rounded-lg my-2 text-white hover:border border-purple hover:bg-white hover:text-purple duration-300"
+                href="#"
+                >Shop All Products</a
+              >
+            </div>
+          </li>
+          <li class="w-[48%] lg:w-[19%] flex flex-wrap content-center">
+            <figure class="w-full overflow-hidden h-[40vh]">
+              <img
+                class="w-full object-cover h-full hover:scale-125 duration-1000"
+                src="src/img/img2.jpg"
+                alt=""
+              />
+            </figure>
+            <div
+              class="p1 w-full flex justify-center text-lg font-primary text-purple"
+            >
+              <p>children sweet design</p>
+            </div>
+            <div class="p2 w-full flex justify-center text-purple my-2">
+              <p>$150.00 – $380.00</p>
+            </div>
+          </li>
+          <li class="w-[48%] lg:w-[19%] flex flex-wrap content-center">
+            <figure class="w-full overflow-hidden h-[40vh]">
+              <img
+                class="w-full object-cover h-full hover:scale-125 duration-1000"
+                src="src/img/img3.jpg"
+                alt=""
+              />
+            </figure>
+            <div
+              class="p1 w-full flex justify-center text-lg font-primary text-purple"
+            >
+              <p>party sweet design</p>
+            </div>
+            <div class="p2 w-full flex justify-center text-purple my-2">
+              <p>$150.00 – $380.00</p>
+            </div>
+          </li>
+          <li class="w-[48%] lg:w-[19%] flex flex-wrap content-center">
+            <figure class="w-full overflow-hidden h-[40vh]">
+              <img
+                class="w-full object-cover h-full hover:scale-125 duration-1000"
+                src="src/img/img4.jpg"
+                alt=""
+              />
+            </figure>
+            <div
+              class="p1 w-full flex justify-center text-lg font-primary text-purple"
+            >
+              <p>classic sweet design</p>
+            </div>
+            <div class="p2 w-full flex justify-center text-purple my-2">
+              <p>$150.00 – $380.00</p>
+            </div>
+          </li>
+          <li class="w-[48%] lg:w-[19%] flex flex-wrap content-center">
+            <figure class="w-full overflow-hidden h-[40vh]">
+              <img
+                class="w-full object-cover h-full hover:scale-125 duration-1000"
+                src="src/img/img7.jpg"
+                alt=""
+              />
+            </figure>
+            <div
+              class="p1 w-full flex justify-center text-lg font-primary text-purple"
+            >
+              <p>fantasy sweet design</p>
+            </div>
+            <div class="p2 w-full flex justify-center text-purple my-2">
+              <p>$150.00 – $380.00</p>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- perfect product/////////////////////// -->
+
+    <div class="w-12/12 flex justify-center">
+      <div class="w-11/12 flex mt-10">
+        <!-- Background Image -->
+        <div class="relative w-full flex overflow-hidden">
+          <!-- Image for the bread background -->
+          <img
+            src="src/img/bakery-process-1.jpg"
+            alt="Bread and Grains"
+            class="w-full h-[80vh] object-cover"
+          />
+
+          <!-- Overlay with content -->
+
+          <div
+            class="absolute z-10 w-full mt-5 inset-0 bg-gradient-to-t from-purple-900 via-purple-700 to-transparent bg-opacity-50 p-8 flex flex-wrap justify-center"
+          >
+            <!-- Heading and Number -->
+            <div class="w-full flex flex-wrap mx-5 items-start">
+              <h1
+                class="text-white text-4xl w-full font-primary te sm:text-5xl lg:text-4xl font-bold leading-tight max-w-sm"
+              >
+                Tell us what you have in mind
+              </h1>
+              <span
+                class="text-white text-6xl w-full font-primary flex justify-end sm:text-7xl font-bold"
+                >01</span
+              >
+            </div>
+
+            <!-- Subtext -->
+            <div class="w-full mt-8 mb-5 mx-5">
+              <p class="uppercase text-gray-100 text-sm tracking-widest mb-4">
+                Manual Ingredients Selection
+              </p>
+              <p class="text-white text-sm sm:text-base max-w-lg">
+                Cras consequat lectus vestibulum tortor pulvinar, quis euismod
+                nisl varius. Ut eu laoreet ex. Aliquam erat volutpat. Nullam
+                quis sagittis nibh. Morbi consectetur ultricies ante ac congue.
+                Donec lorem erat, finibus in velit placerat, rutrum augue.
+              </p>
+            </div>
+          </div>
+          <div
+            class="absolute z-0 top-0 left-0 w-full h-full bg-gradient-to-t from-purple"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-12/12 flex justify-center">
+      <div class="relative w-11/12 flex lg:justify-between mt-10">
+        <!-- Background Image -->
+        <div
+          class="relative w-full lg:w-[48%] flex h-[80vh] lg:h-[100vh] overflow-hidden"
+        >
+          <!-- Image for the bread background -->
+          <img
+            src="src/img/bakery-process-2.jpg"
+            alt="Bread and Grains"
+            class="w-full h-[80vh] lg:h-[100vh] object-cover"
+          />
+
+          <!-- Overlay with content -->
+
+          <div
+            class="absolute z-10 mt-5 inset-0 bg-gradient-to-t from-purple-900 via-purple-700 to-transparent bg-opacity-50 p-8 flex flex-wrap justify-center"
+          >
+            <!-- Heading and Number -->
+            <div class="w-full flex flex-wrap mx-5 items-start">
+              <h1
+                class="text-white text-4xl w-full font-primary te sm:text-5xl lg:text-4xl font-bold leading-tight max-w-sm"
+              >
+                We Start Baking
+              </h1>
+              <span
+                class="text-white text-6xl w-full font-primary flex justify-end sm:text-7xl font-bold"
+                >02</span
+              >
+            </div>
+
+            <!-- Subtext -->
+            <div class="w-full mt-8 mb-5 mx-5">
+              <p class="uppercase text-gray-100 text-sm tracking-widest mb-4">
+                SWEET & DELICIOUS
+              </p>
+              <p class="text-white text-sm sm:text-base max-w-lg">
+                Cras consequat lectus vestibulum tortor pulvinar, quis euismod
+                nisl varius. Ut eu laoreet ex. Aliquam erat volutpat. Nullam
+                quis sagittis nibh. Morbi consectetur ultricies ante ac congue.
+                Donec lorem erat, finibus in velit placerat.
+              </p>
+            </div>
+          </div>
+          <div
+            class="absolute z-0 top-0 left-0 w-full h-full bg-gradient-to-t from-gray-400"
+          ></div>
+        </div>
+        <!-- /////////////////////////////////////////////////// -->
+        <div
+          class="relative w-full lg:w-[48%] lg:h-[100vh] hidden lg:flex bg-slate-400 overflow-hidden"
+        >
+          <!-- Overlay with content -->
+
+          <div
+            class="absolute mt-5 inset-0 bg-gradient-to-t from-purple-900 via-purple-700 to-transparent bg-opacity-50 p-8 flex flex-wrap justify-center"
+          >
+            <!-- Heading and Number -->
+            <div class="w-full flex flex-wrap mx-5 items-start">
+              <span
+                class="text-white w-full font-primary flex justify-start text-1xl font-bold"
+                >DONT JUST TAKE OUR WORD FOR IT</span
+              >
+              <h1
+                class="text-purple text-3xl w-full font-primary leading-tight max-w-sm"
+              >
+                “Finally found an alternative to the mass produced products.
+                Something that incorporates real organic ingredients, nutrient
+                dense wellness while promoting sustainability and activity.”
+              </h1>
+              <span
+                class="text-white text-xl w-full font-primary flex justify-start sm:text-2xl font-bold"
+                >Rachel Cooper, Founder</span
+              >
+            </div>
+
+            <!-- Subtext -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-12/12 flex justify-center">
+      <div class="w-11/12 mt-10 flex">
+        <div
+          class="relative w-full h-[80vh] lg:hidden flex bg-slate-400 overflow-hidden"
+        >
+          <!-- Overlay with content -->
+
+          <div
+            class="absolute mt-5 inset-0 bg-gradient-to-t from-purple-900 via-purple-700 to-transparent bg-opacity-50 p-8 flex flex-wrap justify-center"
+          >
+            <!-- Heading and Number -->
+            <div class="w-full flex flex-wrap mx-5 items-start">
+              <span
+                class="text-white w-full font-primary flex justify-start text-lg font-bold"
+                >DONT JUST TAKE OUR WORD FOR IT</span
+              >
+              <h1
+                class="text-purple text-2xl md:text-3xl w-full font-primary leading-tight max-w-sm"
+              >
+                “Finally found an alternative to the mass produced products.
+                Something that incorporates real organic ingredients, nutrient
+                dense wellness while promoting sustainability and activity.”
+              </h1>
+              <span
+                class="text-white text-lg w-full font-primary flex justify-start font-bold"
+                >Rachel Cooper, Founder</span
+              >
+            </div>
+
+            <!-- Subtext -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-12/12 flex justify-center">
+      <div class="w-11/12 mt-10 flex">
+        <!-- Background Image -->
+        <div class="relative w-full flex overflow-hidden">
+          <!-- Image for the bread background -->
+          <img
+            src="src/img/bakery-process-3.jpg"
+            alt="Bread and Grains"
+            class="w-full h-[80vh] object-cover"
+          />
+
+          <!-- Overlay with content -->
+
+          <div
+            class="absolute z-10 mt-5 inset-0 bg-gradient-to-t from-purple-900 via-purple-700 to-transparent bg-opacity-50 p-8 flex flex-wrap justify-center"
+          >
+            <!-- Heading and Number -->
+            <div class="w-full flex flex-wrap mx-5 items-start">
+              <h1
+                class="text-white text-4xl w-full font-primary te sm:text-5xl lg:text-4xl font-bold leading-tight max-w-sm"
+              >
+                Delivered to your home
+              </h1>
+              <span
+                class="text-white text-6xl w-full font-primary flex justify-end sm:text-7xl font-bold"
+                >03</span
+              >
+            </div>
+
+            <!-- Subtext -->
+            <div class="w-full mt-8 mb-5 mx-5">
+              <p class="uppercase text-gray-100 text-sm tracking-widest mb-4">
+                BAKED TO ORDER & GIFT WRAPPED
+              </p>
+              <p class="text-white text-sm sm:text-base max-w-lg">
+                Cras consequat lectus vestibulum tortor pulvinar, quis euismod
+                nisl varius. Ut eu laoreet ex. Aliquam erat volutpat. Nullam
+                quis sagittis nibh. Morbi consectetur ultricies ante ac congue.
+                Donec lorem erat, finibus in velit placerat, rutrum augue.
+              </p>
+            </div>
+          </div>
+          <div
+            class="absolute z-0 top-0 left-0 w-full h-full bg-gradient-to-t from-blue-500"
+          ></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- baking done////////////////////////////////////// -->
+
+    <div class="w-12/12 flex justify-center">
+      <div class="w-11/12 flex flex-wrap">
+        <div class="w-full flex flex-wrap">
+          <p class="mt-20 text-center w-full text-slate-500 text-sm font-mono">
+            LOCATIONS
+          </p>
+          <h1 class="text-center w-full my-4 text-purple text-3xl font-primary">
+            Get To Know Us
+          </h1>
+        </div>
+        <ul class="w-full flex flex-wrap">
+          <li class="w-full lg:w-[50%] mt-4 flex flex-wrap">
+            <figure class="w-full overflow-hidden h-[50vh]">
+              <img
+                class="w-full object-cover h-full hover:scale-[1.05] hover:contrast-125 duration-500"
+                src="src/img/img9.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="w-full flex flex-wrap bg-slate-100">
+              <h1
+                class="text-center w-full my-5 text-purple text-2xl font-primary"
+              >
+                canada
+              </h1>
+              <div class="w-full lg:w-4/12 flex my-3 flex-wrap justify-center">
+                <p class="text-center w-full text-slate-500 text-sm font-mono">
+                  CALL US
+                </p>
+                <p class="text-center w-full text-slate-500 text-sm font-mono">
+                  1.800.458.556
+                </p>
+              </div>
+              <div class="w-full lg:w-4/12 flex my-3 flex-wrap justify-center">
+                <p class="text-center w-full text-slate-500 text-sm font-mono">
+                  OPEN ALL WEEK
+                </p>
+                <p class="text-center w-full text-slate-500 text-sm font-mono">
+                  9:00 AM – 6:00 PM
+                </p>
+              </div>
+              <div class="w-full lg:w-4/12 flex justify-center">
+                <a
+                  class="bg-white py-2 px-5 rounded-lg my-4 text-purple hover:bg-purple hover:text-white duration-300"
+                  href=""
+                  >View Map</a
+                >
+              </div>
+            </div>
+          </li>
+          <li class="w-full lg:w-[50%] mt-4 flex flex-wrap">
+            <figure class="w-full overflow-hidden h-[50vh]">
+              <img
+                class="w-full object-cover h-full hover:scale-[1.05] hover:contrast-125 duration-500"
+                src="src/img/img10.jpg"
+                alt=""
+              />
+            </figure>
+            <div class="w-full flex flex-wrap bg-red-100">
+              <h1
+                class="text-center w-full my-5 text-purple text-2xl font-primary"
+              >
+                Vancover
+              </h1>
+              <div class="w-full lg:w-4/12 flex my-3 flex-wrap justify-center">
+                <p class="text-center w-full text-slate-500 text-sm font-mono">
+                  CALL US
+                </p>
+                <p class="text-center w-full text-slate-500 text-sm font-mono">
+                  1.800.458.556
+                </p>
+              </div>
+              <div class="w-full lg:w-4/12 flex my-3 flex-wrap justify-center">
+                <p class="text-center w-full text-slate-500 text-sm font-mono">
+                  OPEN ALL WEEK
+                </p>
+                <p class="text-center w-full text-slate-500 text-sm font-mono">
+                  9:00 AM – 6:00 PM
+                </p>
+              </div>
+              <div class="w-full lg:w-4/12 flex justify-center">
+                <a
+                  class="bg-white py-2 px-5 rounded-lg my-4 text-purple hover:bg-purple hover:text-white duration-300"
+                  href=""
+                  >View Map</a
+                >
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- location done////////////////////////////////// -->
+
+    <div class="w-12/12 flex justify-center">
+      <div class="w-11/12 flex">
+        <ul class="w-full flex flex-wrap lg:justify-between">
+          <li class="w-full lg:w-[25%] flex justify-center mt-20">
+            <figure class="w-full h-[60vh] flex justify-center overflow-hidden">
+              <img
+                class="w-full h-full object-cover hover:scale-[1.08] hover:contrast-125 duration-700"
+                src="src/img/img14.jpg"
+                alt=""
+              />
+            </figure>
+          </li>
+          <li
+            class="w-full lg:w-[45%] lg:mt-20 flex flex-wrap justify-center lg:content-center mt-10 bg-gray-200"
+          >
+            <div class="p1 w-full my-1 flex justify-center">
+              <p class="mt-7 text-slate-500 text-sm md:text-lg font-mono">
+                MADE FOR SHARING
+              </p>
+            </div>
+            <div class="h1 w-full my-1 flex justify-center">
+              <h1 class="mt-4 text-purple text-3xl md:text-5xl font-primary">
+                Let's stay in touch
+              </h1>
+            </div>
+            <div class="a w-full my-1 flex justify-center">
+              <a
+                class="bg-purple py-2 lg:h-[60px] px-5 rounded-lg mt-2 mb-7 flex justify-center items-center text-white hover:bg-white hover:border border-purple hover:text-purple duration-300"
+                href="#"
+              >
+                <i class="pr-1 ri-instagram-line"></i>
+                Follow Us</a
+              >
+            </div>
+          </li>
+          <li class="w-full lg:w-[24%] flex justify-center mt-10 lg:mt-20">
+            <figure class="w-full h-[60vh] flex justify-center overflow-hidden">
+              <img
+                class="w-full h-full object-cover hover:scale-[1.08] hover:contrast-125 duration-700"
+                src="src/img/img17.jpg"
+                alt=""
+              />
+            </figure>
+          </li>
+          <li class="w-full lg:w-[24%] flex justify-center mt-10">
+            <figure class="w-full h-[60vh] flex justify-center overflow-hidden">
+              <img
+                class="w-full h-full object-cover hover:scale-[1.08] hover:contrast-125 duration-700"
+                src="src/img/img13.jpg"
+                alt=""
+              />
+            </figure>
+          </li>
+          <li class="w-full lg:w-[24%] flex justify-center mt-10">
+            <figure class="w-full h-[60vh] flex justify-center overflow-hidden">
+              <img
+                class="w-full h-full object-cover hover:scale-[1.08] hover:contrast-125 duration-700"
+                src="src/img/img12.jpg"
+                alt=""
+              />
+            </figure>
+          </li>
+          <li class="w-full lg:w-[24%] flex justify-center mt-10">
+            <figure class="w-full h-[60vh] flex justify-center overflow-hidden">
+              <img
+                class="w-full h-full object-cover hover:scale-[1.08] hover:contrast-125 duration-700"
+                src="src/img/img16.jpg"
+                alt=""
+              />
+            </figure>
+          </li>
+          <li class="w-full lg:w-[24%] flex justify-center mt-10">
+            <figure class="w-full h-[60vh] flex justify-center overflow-hidden">
+              <img
+                class="w-full h-full object-cover hover:scale-[1.08] hover:contrast-125 duration-700"
+                src="src/img/img15.jpg"
+                alt=""
+              />
+            </figure>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- in touch//////////////////////////////////// -->
+
+    <div class="w-12/12 flex">
+      <figure class="w-full flex relative h-[50vh] mt-20">
+        <img
+          class="w-full h-full object-cover"
+          src="src/img/call-to-action-bg.jpg"
+          alt=""
+        />
+        <figcaption
+          class="absolute top-0 flex flex-wrap justify-start content-center overflow-hidden left-0 w-full h-full"
+        >
+          <div
+            class="w-full mx-5 md:mx-10 lg:mx-20 flex my-3 flex-wrap justify-center"
+          >
+            <p
+              class="text-left w-full text-slate-100 text-sm md:text-lg font-mono"
+            >
+              TRY OUR SEASONAL PRODUCTS
+            </p>
+          </div>
+          <div
+            class="w-full mx-5 md:mx-10 lg:mx-20 flex my-3 flex-wrap justify-center"
+          >
+            <h1
+              class="text-left w-full my-5 text-white text-3xl md:text-4xl lf:text-5xl font-primary"
+            >
+              Order for pick-up or delivery to your home
+            </h1>
+          </div>
+          <div
+            class="w-full mx-5 md:mx-10 lg:mx-20 lg:w-4/12 flex justify-start"
+          >
+            <a
+              class="bg-white py-2 px-5 h-[50px] flex justify-center items-center rounded-lg my-4 text-purple hover:bg-purple hover:text-white duration-300"
+              href=""
+              >Shop Now</a
+            >
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- seasonal done/////////////////////////////////////// -->
+
+    <div class="w-12/12 flex justify-center bg-white">
+      <div class="w-11/12 flex">
+        <ul class="w-full flex flex-wrap">
+          <li class="w-full lg:w-[50%] flex flex-wrap mt-20">
+            <figure class="w-full flex justify-center">
+              <img
+                class="w-10/12 object-cover"
+                src="src/img/main_ligo5.svg"
+                alt=""
+              />
+            </figure>
+            <ul class="w-full flex flex-wrap justify-center mt-5">
+              <li class="flex justify-center items-center">
+                <a
+                  class="text-purple py-2 px-3 mx-2 text-sm flex hover:text-gray-400 duration-300"
+                  href=""
+                  >HOME</a
+                >
+              </li>
+              <li class="flex justify-center items-center">
+                <a
+                  class="text-purple py-2 px-3 mx-2 text-sm flex hover:text-gray-400 duration-300"
+                  href=""
+                  >SHOP</a
+                >
+              </li>
+              <li class="flex justify-center items-center">
+                <a
+                  class="text-purple py-2 px-3 mx-2 text-sm flex hover:text-gray-400 duration-300"
+                  href=""
+                  >ABOUT</a
+                >
+              </li>
+              <li class="flex justify-center items-center">
+                <a
+                  class="text-purple py-2 px-3 mx-2 text-sm flex hover:text-gray-400 duration-300"
+                  href=""
+                  >GALLERY</a
+                >
+              </li>
+              <li class="flex justify-center items-center">
+                <a
+                  class="text-purple py-2 px-3 mx-2 text-sm flex hover:text-gray-400 duration-300"
+                  href=""
+                  >LOCATION</a
+                >
+              </li>
+              <li class="flex justify-center items-center">
+                <a
+                  class="text-purple py-2 px-3 mx-2 text-sm flex hover:text-gray-400 duration-300"
+                  href=""
+                  >JORNAL</a
+                >
+              </li>
+              <li class="flex justify-center items-center">
+                <a
+                  class="text-purple py-2 px-3 mx-2 text-sm flex hover:text-gray-400 duration-300"
+                  href=""
+                  >CONTACT</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li
+            class="w-full lg:w-[50%] flex flex-wrap justify-center lg:justify-evenly lg:content-center"
+          >
+            <div class="w-full flex justify-center">
+              <h1 class="mt-5 text-purple text-center text-2xl font-primary">
+                Subscribe to our Newsletter
+              </h1>
+            </div>
+            <div class="w-full flex flex-wrap">
+              <form
+                class="w-full lg:w-[76%] mt-4 lg:mt-8 flex justify-center"
+                action=""
+                method="get"
+              >
+                <input
+                  class="flex border border-purple rounded-lg px-4 py-2 w-[80%]"
+                  type="email"
+                  id="n1"
+                  name="gmail"
+                  placeholder="Enter email address*"
+                />
+              </form>
+              <div class="w-full lg:w-[23%] mt-4 lg:mt-8 flex justify-center">
+                <a
+                  class="bg-purple py-3 w-[80%] lg:w-full rounded-lg mt-2 lg:mt-0 flex justify-center items-center text-white hover:bg-white hover:border border-purple hover:text-purple duration-300"
+                  href="#"
+                >
+                  Subscribe
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="w-full flex flex-wrap">
+            <div class="w-full flex mt-10 mb-4 justify-center">
+              <p class="text-gray-500 text-center">
+                © built and Developed by
+                <a class="text-purple" href="">Arian Afsharian</a> • powerd by
+                <a class="text-purple" href="">Parsa Ghorbanian</a> • we try to
+                make website with the best methods and the highest
+                functionality.
+              </p>
+            </div>
+            <div class="w-full flex mb-4 justify-center">
+              <ul class="w-[60%] flex justify-evenly">
+                <li class="w-[40px] h-[40px] flex">
+                  <a
+                    class="w-full h-full flex justify-center items-center rounded-lg hover:bg-slate-200 duration-300"
+                    href=""
+                    ><i
+                      class="ri-instagram-line text-purple text-lg md:text-xl"
+                    ></i
+                  ></a>
+                </li>
+                <li class="w-[40px] h-[40px] flex">
+                  <a
+                    class="w-full h-full flex justify-center items-center rounded-lg hover:bg-slate-200 duration-300"
+                    href=""
+                    ><i
+                      class="ri-facebook-fill text-purple text-lg md:text-xl"
+                    ></i
+                  ></a>
+                </li>
+                <li class="w-[40px] h-[40px] flex">
+                  <a
+                    class="w-full h-full flex justify-center items-center rounded-lg hover:bg-slate-200 duration-300"
+                    href=""
+                    ><i
+                      class="ri-twitter-x-fill text-purple text-lg md:text-xl"
+                    ></i
+                  ></a>
+                </li>
+                <li class="w-[40px] h-[40px] flex">
+                  <a
+                    class="w-full h-full flex justify-center items-center rounded-lg hover:bg-slate-200 duration-300"
+                    href=""
+                    ><i
+                      class="ri-linkedin-fill text-purple text-lg md:text-xl"
+                    ></i
+                  ></a>
+                </li>
+                <li class="w-[40px] h-[40px] flex">
+                  <a
+                    class="w-full h-full flex justify-center items-center rounded-lg hover:bg-slate-200 duration-300"
+                    href=""
+                    ><i
+                      class="ri-pinterest-line text-purple text-lg md:text-xl"
+                    ></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- footer done////////////////////////////////////////////// -->
+  </body>
+</html>
